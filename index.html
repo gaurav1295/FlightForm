@@ -1,0 +1,331 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!--fonts-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Rajdhani" rel="stylesheet">
+        <!--styles-->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
+        <link rel="stylesheet" href="css/simplebar.css">
+        <!--additional styles-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+        <!--functional styles-->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/responsive_g.css">
+    </head>
+    <body style="background:yellow;">
+    
+<div class="main_container_g" style="margin:2% auto;background:white;border-radius: 9px;
+-webkit-box-shadow: 7px 8px 23px -3px #000000c2;
+       -moz-box-shadow: 7px 8px 23px -3px #000000c2;
+        -ms-box-shadow: 7px 8px 23px -3px #000000c2;
+         -o-box-shadow: 7px 8px 23px -3px #000000c2;
+         box-shadow: 7px 8px 23px -3px #000000c2;">
+   <div class="row" id="outside">
+      <form class="col col-md-12 col-12"  style="padding:0px;">
+         <div class="row way_row_g" style="    margin: 0px;
+    padding-top: 3%;
+    padding-left: 8%;
+    background: #222;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+       margin-bottom: 27px;">
+            <p class="col col-md-2 col-4" style="padding: 0px;">
+               <input type="checkbox" class="filled-in" id="oneway" />
+               <label for="oneway" class="way_label_g">One Way</label>
+            </p>
+            <p class="col col-md-2 col-4" style="padding: 0px;">
+               <input type="checkbox" class="filled-in" id="roundtrip" checked="checked"/>
+               <label for="roundtrip" class="way_label_g">Round Trip</label>
+            </p>
+             <p class="col col-md-2 col-4" style="padding: 0px;">
+               <input type="checkbox" class="filled-in" id="multitrip"/>
+               <label for="multitrip" class="way_label_g">Multi Trip</label>
+            </p>
+         </div>
+         <!--first row-->
+         <div class="row single_row_g" style="margin-bottom:0;">
+            <div class="input-field col col-md-5 col-12"  data-toggle="collapse" data-target="#demo">
+               <i id="origin_icon" class="material-icons prefix" style="margin-top: 23px;
+                  right: 31px;width: 39px;" >arrow_drop_down</i>
+               <input placeholder=" " id="origin" type="text" class="inputg" required >
+               <label style="margin-left: 0;font-size: 27px;
+    line-height: 8px;
+    color: #00000091;
+    font-weight: 600;" for="origin">Origin</label>
+            </div>
+            <div class="col col-md-1 col-12"><i class="material-icons middleicon">airplanemode_active</i></div>
+            
+            <div class="input-field col col-md-5 col-12 yaalla"  data-toggle="collapse" data-target="#demo1">
+               <i id="destination_icon" class="material-icons prefix" style="margin-top: 23px;
+                  right: 31px;width: 39px;" >arrow_drop_down</i>
+               <input placeholder=" " id="destination" type="text" class="inputg" required >
+               <label style="margin-left: 0;font-size: 27px;
+    line-height: 8px;
+    color: #00000091;
+    font-weight: 600;" for="destination">Destination</label>
+            </div>
+         </div>
+         <!--this where row for origin , destination ends-->
+         <!--this is where second row starts-->
+         <div class="row single_row_g" style="margin-bottom: 7px;" >
+            <!--first part of second row-->
+            <div class="col col-md-6 col-12" style="padding: 0;">
+               <div id="depart_g_date" class="input-field col col-md-6 col-12">
+                  <i id="departure_date_icon" class="material-icons prefix" style="margin-top: 23px;
+                     right: 22px;width: 39px;color: #1c6e7b;" >date_range</i>
+                  <input placeholder=" " id="departure_date" type="text" class="inputg datepickerr" required>
+                  <label style="margin-left: 0;font-size: 27px;
+    line-height: 8px;
+    color: #00000091;
+    font-weight: 600;" for="departure_date"><span>Depart Date</span></label>
+                  <!--<i class="material-icons datesection">arrow_upward</i>-->
+               </div>
+               <div id="arrival_g_date" class="input-field col col-md-6 col-12">
+                  <i id="arrival_date_icon" class="material-icons prefix" style="margin-top: 23px;
+                     right: 22px;width: 39px;color: #1c6e7b;" >date_range</i>
+                  <input placeholder=" " id="arrival_date" type="text" class="inputg datepickerr">
+                  <label style="margin-left: 0;font-size: 27px;
+    line-height: 8px;
+    color: #00000091;
+    font-weight: 600;" for="arrival_Date">Arrival Date</label>
+                  <!--<i class="material-icons datesection">arrow_upward</i>-->
+               </div>
+            </div>
+            <!--second part of second row-->
+            <div class="col col-md-6 col-12 noSelect">
+               <div class="input-field col col-md-5 col-12" style="padding:0px;" data-toggle="collapse" data-target="#passenger_drop">
+                  <short style="
+                     position: absolute;
+    top: 26px;
+    right: 73px;
+    font-size: 19px;
+                     ">Passenger</short>
+                  <i id="no_of_passengers_icon" class="material-icons prefix" style="margin-top: 25px;
+    margin-right: 9px;
+    right: 2%;
+    width: 30px;
+    border: 2px solid;
+    border-radius: 50%;
+    color: #1c6e7b;
+    font-weight: bolder;
+    font-size: 26px;" >add</i>
+                  <input placeholder=" " id="no_of_passengers" type="text" class="inputg" readonly>
+                  <label style="margin-left: 0;font-size: 27px;
+    line-height: 8px;
+    color: #00000091;
+    font-weight: 600;left: 0;" for="no_of_passengers"><span>Passengers</span></label>
+                  <!--passenger dropdown-->
+                  <div id="passenger_drop" class="collapse" style="background: #efeeee;">
+                     <div class="collapse-content" style="top: -8%;margin-left: .3%;height: 100%;background: #efeeee;">
+                        <!--row that hold all the other rows-->
+                        <div class="row" style="height: 100%;margin: 0px;padding: 0px;">
+                           <!--first row-->
+                           <div class="row" style="width: 100%;margin: 0px;">
+                              <!--left side first row-->
+                              <div class="col col-md-6 newvalg" style="padding-left: 22px;padding-right: 8px;padding-top: 15px;">
+                                 <div class="less adultless"><span style="padding: 0;position: relative;color: #00a5aa;">−</span></div>
+                                 <input id="number_of_adults" class="number" value="1" readonly></input>
+                                 <div class="more adultmore"><span style="padding: 0;position: relative;color: #00a5aa;">+</span></div>
+                              </div>
+                              <!--right side first row-->
+                              <div class="col col-md-6" style="background:white;border-bottom:1px solid #efeeee;">
+                                 <span style="color: #002e6a;position: relative;top: 31%;font-size: 17px;">Adults</span>
+                              </div>
+                           </div>
+                           <!--first row ends-->
+                           <!--second row-->
+                           <div class="row" style="width: 100%;margin: 0px;">
+                              <!--left side section second row -->
+                              <div class="col col-md-6 newvalg" style="padding-left: 22px;padding-right: 8px;padding-top: 15px;">
+                                 <div class="less childrenless"><span style="padding: 0;position: relative;color: #00a5aa;">−</span></div>
+                                 <input id="number_of_children" class="number" value="0" readonly></input>
+                                 <div class="more childrenmore"><span style="padding: 0;position: relative;color: #00a5aa;">+</span></div>
+                              </div>
+                              <!--right side of second row-->
+                              <div class="col col-md-6" style="background:white;border-bottom:1px solid #efeeee;">
+                                 <span style="color: #002e6a;position: relative;top: 31%;font-size: 17px;">Children (-12 Years)</span>
+                              </div>
+                           </div>
+                           <!--second row ends-->
+                           <!--third row -->
+                           <div class="row" style="width: 100%;margin: 0px;">
+                              <!--left section of third row-->
+                              <div class="col col-md-6 newvalg" style="padding-left: 22px;padding-right: 8px;padding-top: 15px;">
+                                 <div class="less infantless"><span style="padding: 0;position: relative;color: #00a5aa;">−</span></div>
+                                 <input id="number_of_infant" class="number" value="0" readonly></input>
+                                 <div class="more infantmore"><span style="padding: 0;position: relative;color: #00a5aa;">+</span></div>
+                              </div>
+                              <!--right section of third row-->
+                              <div class="col col-md-6" style="background:white;border-bottom:1px solid #efeeee;">
+                                 <span style="color: #002e6a;position: relative;top: 31%;font-size: 17px;">Infants (-2 Years)</span>
+                              </div>
+                           </div>
+                        </div>
+                        <!--row holding all rows end-->
+                     </div>
+                  </div>
+                  <!--passenger dropdown ends -->
+               </div>
+               <div class="input-field col col-md-6 col-12 wahjiwaj_g">
+                  <select class="select_input_g">
+                     <!--<option value="" disabled >Choose your option</option>-->
+                     <option value="Economy" selected>Economy</option>
+                     <option value="Business">Business</option>
+                     <option value="First">First</option>
+                  </select>
+                  <label style="margin-left: 0;font-size: 20px;
+    line-height: 8px;
+    color: #00000091;
+    font-weight: 600;" for="cabin_class">Cabin Class</label>
+               </div>
+            </div>
+         </div>
+         <!--second row ends here-->
+         <!--third row starts here-->
+         <div class="row">
+            <input class="col col-md-3 col-10" type="submit" value="Search Flights" style="    margin: 0 auto;
+    width: 23%;
+    height: 48px;
+    border:none;
+    border-radius: 4px;
+    font-size: 23px;
+    background: #707B7C;
+    color: white;"><i class="material-icons search_button_g" style="color:white;">search</i></input>
+         </div>
+         <!--third row ends here-->
+      </form>
+      <!--collapse starts here-->
+      <div class="row drop_that_holder_g" id="placess">
+         <!--origin dropdown-->
+         <div id="demo" class="collapse" style="width:100%;height:560px;">
+            <div class="collapse-content" style="height:540px;margin-top: -2%;">
+               <div class="row">
+                  <div class="col col-md-8 col-0" id="wah1" style="height: 543px;padding: 0;">
+                     <h6 class="countryheading" style="padding-left: 15px;">Choose A Country</h6>
+                     <div class="row">
+                        <div class="col col-md-12" id="countrylist" style="padding: 0;">
+                           <ul id="countrylistul" class="countrylistulul">
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col col-md-4 col-12" id="wah" style="height: 543px;background:#efeeee;padding: 0;">
+                     <h6 class="countryheading">Select an airport</h6>
+                     <div class="row">
+                        <div class="col col-md-12" id="airportlist" style="padding: 0;">
+                           <ul id="airportlistul">
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--origin ends-->
+         <!--for destination collapse-->
+         <div id="demo1" class="collapse" style="width:100%;height:560px;">
+            <div class="collapse-content" style="height:540px;margin-top: -2%;">
+               <div class="row">
+                  <div class="col col-md-8 col-0" id="wah2" style="height: 543px;padding: 0;">
+                     <h6 class="countryheading" style="padding-left: 15px;">Choose A Country</h6>
+                     <div class="row">
+                        <div class="col col-md-12" id="countrylist" style="padding: 0;">
+                           <ul id="countrylistul1" class="countrylistulul">
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col col-md-4 col-12" id="wah3" style="height: 543px;background:#efeeee;padding: 0;">
+                     <h6 class="countryheading">Select an airport</h6>
+                     <div class="row">
+                        <div class="col col-md-12" id="airportlist" style="padding: 0;">
+                           <ul id="airportlistul1">
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--destination dropdown ends here-->
+      </div>
+      <!--collapse row end-->
+   </div>
+</div>
+        <!--basic script for the page-->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="js/vendor/jquery-3.2.1.min.js"></script>
+        <script src="js/vendor/jquery-ui.min.js"></script>
+        <script src="js/vendor/bootstrap.bundle.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.min.js'></script>
+
+        <!--extra style js-->
+        <script src="js/vendor/materialize.min.js"></script>
+        <script src="js/vendor/notify.js"></script>
+        <script src="js/vendor/simplebar.js"></script>
+        <script src="js/vendor/lodash.js"></script>
+         <script src="js/vendor/fuse.js"></script>
+         <script src="js/vendor/moment.js"></script>
+        <!--function scripts-->
+        <script src="js/airport/listofairport.js"></script>
+        <script src="js/plugins.js"></script>
+
+        <!--script for origin field-->
+        <script src="js/origin/main.js"></script>
+        <script src="js/origin/search.js"></script>
+
+         <!--script for destination field-->
+        <script src="js/destination/main.js"></script>
+        <script src="js/destination/search.js"></script>
+
+        <!--dropdownhandler and input listner on dropdown and scroller script-->
+         <script src="js/event_input_handler/handler.js"></script>
+       <!--origin destination input handler , select field initializer also positioning of collapse origin destination dropdown-->
+        <script src="js/event_input_handler/origin_destination_icon_collapse.js"></script>
+        <!--passenger input script-->
+        <script src="js/event_input_handler/passenger_script.js"></script>
+
+        <!--calender selector script-->
+        <script src="js/event_input_handler/calender_selector.js"></script>
+
+         <!--roundtrip/oneway script-->
+        <script src="js/event_input_handler/roundtrip_oneway.js"></script>
+           
+
+         <!--Global site tag (gtag.js) - Google Analytics-->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113366662-1"></script>
+        <script>
+         window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);};
+        gtag('js', new Date());
+
+         gtag('config', 'UA-113366662-1');
+
+window.addEventListener('click', function(e){   
+  if (document.getElementById('placess').contains(e.target)){
+    return false;
+  } else{
+    $('.collapse').collapse('hide');
+  }
+});
+
+         </script>
+    </body>
+</html>
